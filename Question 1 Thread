@@ -1,0 +1,24 @@
+public class QUES_1 extends Thread {
+	String mesg="";
+	QUES_1(String mesg)// constructor taking a parameter
+	{
+		this.mesg= mesg;
+	}
+	public void run() {
+		try {
+			while(true) {
+				System.out.println(mesg);
+				Thread.sleep(400);//sleeping the thread
+			}
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+______________
+public class thus_Q1 extends Thread  {
+	public static void main(String[] args) {
+		QUES_1 obj=new QUES_1("yooooo");//passing the aegument to the constructor
+		obj.start();//calling the run mathod
+		
+	}
