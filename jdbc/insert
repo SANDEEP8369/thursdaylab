@@ -1,0 +1,47 @@
+package project;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class insert extends create_table{
+	public static void main(String[] args) {
+		insert obj = new insert();
+		obj.insert_value();
+		
+	}
+	public void insert_value() {
+		
+		try {
+			String qur=("insert into jewel(jw_id,jw_name,jw_carat,jw_price)values(?,?,?,?)");
+			String name;
+			int id,carat,price;
+			Scanner sc= new Scanner(System.in);
+			System.out.println("Enter The Jewellery ID:");
+			id=sc.nextInt();
+			System.out.println("Enter The Item Name :");
+			name=sc.next();
+			System.out.println("Enter The Carat :");
+			carat=sc.nextInt();
+			System.out.println("Enter The Price :");
+			price=sc.nextInt();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jewellery", "root", "");
+			PreparedStatement st=con.prepareStatement(qur);
+			st.setInt(1, id);
+			st.setString(2, name);
+			st.setInt(3, carat);
+			st.setInt(4, price);
+			int count=st.executeUpdate();
+			if(count>0) {
+				System.out.println("Data Inserted");
+			}else {
+				System.out.println("Error");
+				con.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
