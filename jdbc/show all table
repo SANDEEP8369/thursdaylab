@@ -1,0 +1,36 @@
+package project;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class show_all extends delete
+{
+	public static void main(String[] args) 
+	{
+		show_all obj = new show_all();
+		obj.show();
+	}
+	public void show() 
+	{
+		try 
+		{
+			String qur=("select * from jewel");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection co= DriverManager.getConnection("jdbc:mysql://localhost:3306/jewellery", "root", "");
+			PreparedStatement  st = co.prepareStatement(qur);
+			ResultSet rs =st.executeQuery();
+			System.out.println("jw_id \t jw_name \t jw_carat \t jw_price");
+			while(rs.next()) {
+				System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getInt(3)+"\t"+rs.getInt(4));
+			}
+			co.close();
+			
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
