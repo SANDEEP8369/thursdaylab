@@ -1,0 +1,44 @@
+package project;
+
+import java.util.Scanner;
+
+public class choice extends show_all {
+	public static void main(String[] args) {
+		choice obj=new choice();
+		obj.main_jewellery();
+	}
+	public void main_jewellery()  {
+	    char jewellery;
+		//String show_db,create_db,create_table,insert_table,update,delete,show_all;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Press[s] For Show Database...\nPress[c] For Create Database...\nPress[t] For Create Tables..."
+				+ "\nPress[i] For Insert Value...\nPress[u] For Update...\nPress[d] For Delete...\nPress[a] For Show All Content...");
+		jewellery=sc.next().charAt(0);
+		
+		switch(jewellery) 
+		{
+		case 's':
+			show_db();
+			break;
+		case 'c':
+			create_demo();
+			break;
+		case 't':
+			table();
+			break;
+		case 'i':
+			insert_value();
+			break;
+		case 'u':
+			 update_tab();
+			break;
+		case 'd':
+			delete_tab();
+			break;
+		case 'a':
+			 show();
+			break;
+		}
+	}
+
+}
