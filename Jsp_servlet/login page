@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<center><h1 style="color: red">Logging Page</h1></center>
+<form action="fetch" method="post" style="text-align: center;">
+<label>Enter Your User Name</label>
+<input type="text" name="u_name"><br><br>
+<label>Enter Your User Password</label>
+<input type="password" name="u_pass"><br><br>
+<input type="submit" value="SUBMIT"><br><br>
+<input type="reset" value="Clear">
+</form>
+</body>
+</html>
