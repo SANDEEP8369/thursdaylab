@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Catlog</title>
+</head>
+<body>
+<center><h1 style="color:maroon;">Welcome To My Jewellery Shop</h1></center>
+<h3>There Are 5 Type Of Jewellery : </h3>
+<div>
+<b>1 :</b>
+<img alt="neckles" src="neckles.jpg" height="80px" width="80px">
+<form action="search" method="post">
+Enter your id   <input type="text" name="neck">
+<input type="submit" value="Search">
+</form>
+</div>
+<div>
+<b>2 :</b>
+<img alt="ring" src="ring.jpg" height="80px" width="80px">
+<form action="search" method="post">
+Enter your id   <input type="text" name="ring">
+<input type="submit" value="Search">
+</form>
+</div>
+<div>
+<b>3 :</b>
+<img alt="earing" src="earing.jpg" height="80px" width="80px">
+<form action="search" method="post">
+Enter your id   <input type="text" name="earing">
+<input type="submit" value="Search">
+</form>
+</div>
+<div>
+<b>4 :</b>
+<img alt="diamond" src="diamond.jpg" height="80px" width="80px">
+<form action="search" method="post">
+Enter your id   <input type="text" name="diamond">
+<input type="submit" value="Search">
+</form>
+</div>
+<div>
+<b>5 :</b>
+<img alt="gold" src="gold.jpg" height="80px" width="80px">
+<form action="search" method="post">
+Enter your id   <input type="text" name="gold">
+<input type="submit" value="Search">
+</form>
+</div>
+<h3>Search Here Select Above ID </h3>
+
+
+<nav>
+<a href="insert.html"><button>insert</button></a>
+<a href="update.jsp"><button>update</button></a>
+<a href=""><button>delete</button></a>
+</nav>
+
+
+</body>
+</html>
