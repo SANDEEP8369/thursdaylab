@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 style="text-align: center;">welcome</h1>
+<fieldset>
+<legend><b>Welcome To My Jewellery Shop</b></legend>
+<label><b>Enter your Name : </b></label>
+<input size="50px" type="text" name="name"><br><br>
+<label><b>Enter your Contact No. : </b></label>
+<input type="number" name="num"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<label><b>Enter your Email :</b> </label>
+<input type="email" name="email"><br><br>
+<label><b>Enter your D.O.B : </b></label>
+<input type="date" name="dob"><br><br>
+<label><b>Enter your Gender :</b> </label>Male <input type="radio"> female<input type="radio"><br><br>
+<label><b>Types Of Jewellery : </b></label>
+<select>
+<option>Neckles</option>
+<option>Ring</option>
+<option>Earing</option>
+<option>Diamond</option>
+<option>Gold</option>
+</select><br><br>
+<label><b>Types Of Carat :</b> </label><br>
+24 carat <input type="radio" name="a"><br>22 carat<input type="radio" name="a"><br>20 carat<input type="radio" name="a"><br><br>
+<label> <b> Range : </b></label><br>
+25000<input type="radio" name="money"><br>30000<input type="radio" name="money"><br>40000<input type="radio" name="money"><br>50000<input type="radio" name="money"><br><br>
+<center><a href="login.html"><button >SUBMIT</button></a></center>
+</fieldset>
+</body>
+</html>
